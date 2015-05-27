@@ -104,6 +104,8 @@ html {
 body {
     font-family: Inconsolata, 'Courier New', Courier, sans-serif;
     font-size: 1.0em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .main-container {
     display: block;
@@ -116,9 +118,14 @@ body {
     border: 1px solid #404040;
     display: block;
     color: #404040;
+    text-align: center;
 }
 .main a {
     color: green;
+}
+.main h1 {
+    margin-top: 0;
+    line-height: 1.0;
 }
 .social {
     list-style-type: none;
@@ -130,17 +137,18 @@ body {
 
 /* 768px */
 @media only screen and (min-width: 768px) {
+    body, html {
+        height: 100%;
+    }
     .main-container {
-        position: absolute;
-        padding: 0;
+        position: relative;
+        min-height: 300px;
         top: 50%;
-        left: 50%;
-        margin: -116px 0 0 -209px;
+        transform: translateY(-50%);
         max-width: 550px;
     }
     .main {
         padding: 75px 100px;
-        max-width: none;
     }
 }
 
